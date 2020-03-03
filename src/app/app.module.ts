@@ -9,6 +9,9 @@ import { APP_ROUTES } from './app.routes';
 //Modulos
 import { PageModule } from './pages/pages.module';
 
+//servicios
+import { ServiceModule } from './services/service.module';
+
 
 // Componentes
 import { AppComponent } from './app.component';
@@ -29,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     APP_ROUTES,
     PageModule,
-    FormsModule
+    FormsModule,
+    ServiceModule
     
   ],
   providers: [],
