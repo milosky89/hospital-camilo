@@ -14,18 +14,22 @@ import { PageModule } from './pages/pages.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrerComponent } from './login/registrer.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistrerComponent,      
+    RegistrerComponent,
+    
   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
-    PageModule
+    PageModule,
+    FormsModule
     
   ],
   providers: [],
