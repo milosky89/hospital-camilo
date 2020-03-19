@@ -10,7 +10,7 @@ import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 })
 export class BreadcrumbsComponent implements OnInit {
 
-  titulo: string;
+  label: string='';
 
   constructor(private router: Router,
                 private title: Title,
@@ -18,14 +18,14 @@ export class BreadcrumbsComponent implements OnInit {
     
      this.getDataRoute()
     .subscribe( data =>{
-        console.log(event);
-        this.titulo= data.titulo;
-        this.title.setTitle( this.titulo );
+        
+        this.label= data.titulo;
+        this.title.setTitle( this.label );
 
       const metaTag: MetaDefinition = {
 
         name: 'description',
-        content: this.titulo
+        content: this.label
       };
       this. meta.updateTag(metaTag);
 
